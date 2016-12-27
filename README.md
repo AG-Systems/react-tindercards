@@ -1,4 +1,4 @@
-# react-tinder-cards
+# react-tindercards
 
 Requirements: 
 
