@@ -25,8 +25,8 @@
           return (
             <ul>
               {this.props.list.map(( post,index )=>
-                <div id="main" style={divStyle} className={post.id}>
-                      <div className="card">
+                <div id="main" key={index} style={divStyle} className={post.id}>
+                      <div className="card" >
                         <img className="card-img-top" src="https://placehold.it/350x150" alt="Card image cap" />
                         <div className="card-block">
                           <h4 className="card-title">{ post.title }</h4>
