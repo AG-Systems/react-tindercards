@@ -4,11 +4,11 @@ I noticed all of the other tinder react projects are complicated and I wanted an
 
 ## Demo:
 
-[Renders one card at an time](https://gyazo.com/65b156e5647acd7b7a6fc50f883829d3f)
+![Renders one card at an time](http://i.imgur.com/1Z35Ij3.gif)
 
 **It renders one card at an time for increased performance and less load**
 
-[Functions are attached](https://gyazo.com/cf34c95419a14c06749e61f6ce83046b)
+![Functions are attached](http://i.imgur.com/9wgCIEG.gifb)
 
 **The like and dislike function is already attached**
 
