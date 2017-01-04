@@ -1,10 +1,14 @@
-window.onload = function() {    
+  
+  const divStyle = {
+    width: 350,
+    margin: 0
+      };
     var List = React.createClass({
         render: function() {
           return (
             <div>
               {this.props.list.map( post =>
-                <div id="main" className={post.id}>
+                <div id="main" style={divStyle} className={post.id}>
                     <div className="card">
                       <img className="card-img-top" src="https://placehold.it/350x150" alt="Card image cap" />
                       <div className="card-block">
@@ -25,13 +29,13 @@ window.onload = function() {
         let post = {
               "posts": [
                 {
-                  "title": "Hello ",
-                  "body": "My name is ",
+                  "title": "Person1 ",
+                  "body": "bio1 ",
                   "id": "1"
                 },
                 {
-                  "title": "send me pics",
-                  "body": "please",
+                  "title": "Person2",
+                  "body": "bio2",
                   "id":"2"
                 }
               ]
@@ -46,17 +50,3 @@ window.onload = function() {
       <Playlist/>, 
       document.getElementById('container')
     );
-
-    var counter = 1;
-    $( ".btn-primary" ).click(function() 
-    {
-      $("."+ counter).hide();
-      counter++;
-      $("." + counter).fadeIn();
-    });
-    for(var z = 3; z > counter;z--)
-    {
-        $("." + z).hide();
-    }
-
-};
