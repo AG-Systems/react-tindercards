@@ -1,18 +1,40 @@
   var counter = 0;
+  // to keep track what card you have
   const divStyle = {
     width: 350,
     margin: 0
       };
-    var List = React.createClass({
+    // Just for styles. Feel free to play around with this.
+    var Card = React.createClass({
         like: function () {
             console.log("like");
-            counter += 1;
-            this.forceUpdate()
+            // Need to fix this
+            if(counter >= 1)
+            {
+              counter += 2;
+            }
+            else
+            {
+              counter += 1;
+            }
+            this.forceUpdate();
+            /* if you want the fade effect.
+              $("#main").hide();
+              $("#main").fadeIn();
+            */
         },
         dislike: function () {
             console.log("dislike");
-            counter += 1;
-            this.forceUpdate()
+            // Need to fix this
+            if(counter >= 1)
+            {
+              counter += 2;
+            }
+            else
+            {
+              counter += 1;
+            }
+            this.forceUpdate();
         },
         render: function() {
           var current = this.props.list[counter];
@@ -20,7 +42,7 @@
             <ul>
                 <div id="main" style={divStyle} className={this.props.list[counter].id }>
                       <div className="card" >
-                        <img className="card-img-top" src="https://placehold.it/350x150" alt="Card image cap" />
+                        <img className="card-img-top" src={this.props.list[counter].img} alt="Card image cap" />
                         <div className="card-block">
                           <h4 className="card-title">{ this.props.list[counter].title }</h4>
                           <p className="card-text">{ this.props.list[counter].body }</p>
@@ -33,53 +55,59 @@
           )
         }
       });
-    var Playlist = React.createClass({
+    var Cardmaster = React.createClass({
       render() {
         let post = {
               "posts": [
                 {
-                  "title": "Person1 ",
-                  "body": "bio1 ",
+                  "title": "Auriga ",
+                  "body": "Hey, thats my creators name!",
+                  "img": "img/1.jpg",
                   "id": "1"
                 },
                 {
-                  "title": "Person2",
-                  "body": "bio2",
+                  "title": "Galaxy",
+                  "body": "The unknown space",
+                  "img": "img/2.jpg",
                   "id":"2"
                 },
                 ,
                 {
-                  "title": "Person3",
-                  "body": "bio3",
+                  "title": "Nebula",
+                  "body": "Space far far away",
+                  "img": "img/3.jpg",
                   "id":"3"
                 },
                 ,
                 {
-                  "title": "Person4",
-                  "body": "bio4",
+                  "title": "Nova",
+                  "body": "No bio is given",
+                  "img": "img/4.jpg",
                   "id":"4"
                 },
                 ,
                 {
-                  "title": "Person5",
-                  "body": "bio5",
+                  "title": "Afterglow",
+                  "body": "Glowing like an diamond",
+                  "img" : "img/5.jpg",
                   "id":"5"
                 },
                 ,
                 {
-                  "title": "Person6",
-                  "body": "bio6",
+                  "title": "Master",
+                  "body": "Thats the branch",
+                  "img": "img/6.jpg",
                   "id":"6"
                 }
               ]
             }
         return (
-            <List list={post.posts} />
+            <Card list={post.posts} />
         )
       }
     });
     
     ReactDOM.render(
-      <Playlist/>, 
+      <Cardmaster/>, 
       document.getElementById('container')
     );
