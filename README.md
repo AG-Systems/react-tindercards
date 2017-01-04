@@ -1,14 +1,28 @@
 # react-tindercards
 
+I noticed all of the other tinder react projects are complicated and I wanted an simpler version where you can get started and understand the code as easy and fast as possible
+
+## Demo:
+
+[Renders one card at an time](https://gyazo.com/65b156e5647acd7b7a6fc50f883829d3f)
+
+**It renders one card at an time for increased performance and less load**
+
+[Functions are attached](https://gyazo.com/cf34c95419a14c06749e61f6ce83046b)
+
+**The like and dislike function is already attached**
+
 Requirements: 
 
-1) Bootstrap V4
+1) Bootstrap V4 (For the cards)
 
-2) Reactjs
+2) Reactjs (well...)
 
-3) Jquery
+3) Jquery (For bootstrap)
 
-*How to use*
+4) Tether (For bootstrap)
+
+### Installing
 
 1)
    ``` JavaScript
@@ -51,7 +65,23 @@ Requirements:
       
  4)
     Enjoy
-    
-    
-    
-PS: If you want to add photos, you can add a img url and insert that in the object array. 
+
+
+
+
+## Contributing
+
+1) Fork the project
+
+2) Make your changes
+
+3) Sumbit the changes as an pull request to this project
+
+
+## License
+
+This project is licensed under the MIT License. You already know.
+
+Please still give credit where its due however. I worked hard on this project :)
+
+
