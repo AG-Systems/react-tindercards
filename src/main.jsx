@@ -1,42 +1,34 @@
-  var counter = 1;
+  var counter = 0;
   const divStyle = {
     width: 350,
     margin: 0
       };
-    function nextcard(checker)
-    {
-      $("." + checker).remove();
-      checker++;
-      $("."+checker).show();
-    }
     var List = React.createClass({
         like: function () {
-            nextcard(counter);
             console.log("like");
             counter += 1;
+            this.forceUpdate()
         },
         dislike: function () {
-            nextcard(counter);
             console.log("dislike");
             counter += 1;
+            this.forceUpdate()
         },
         render: function() {
-          
+          var current = this.props.list[counter];
           return (
             <ul>
-              {this.props.list.map(( post,index )=>
-                <div id="main" key={index} style={divStyle} className={post.id}>
+                <div id="main" style={divStyle} className={this.props.list[counter].id }>
                       <div className="card" >
                         <img className="card-img-top" src="https://placehold.it/350x150" alt="Card image cap" />
                         <div className="card-block">
-                          <h4 className="card-title">{ post.title }</h4>
-                          <p className="card-text">{ post.body }</p>
+                          <h4 className="card-title">{ this.props.list[counter].title }</h4>
+                          <p className="card-text">{ this.props.list[counter].body }</p>
                           <button type='button' onClick={this.like} className="btn btn-primary"> Yes, I'm Interested </button>
                           <button type='button' onClick={this.dislike} className="btn btn-danger"> No, Skip </button>
                         </div>
                       </div>
                   </div>
-              )} 
             </ul>
           )
         }
