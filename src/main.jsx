@@ -38,6 +38,7 @@
         },
         render: function() {
           var current = this.props.list[counter];
+          // you may want to change ul to div as I found out it screws with the margins
           return (
             <ul>
                 <div id="main" style={divStyle} className={this.props.list[counter].id }>
