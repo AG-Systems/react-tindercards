@@ -25,7 +25,7 @@ Requirements:
 ### Installing
 
 1)
-   ``` JavaScript
+  ```html
   <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script> 
   <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
